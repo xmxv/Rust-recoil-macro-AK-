@@ -1,29 +1,24 @@
---------------------
--- MouseWheel = 2 --
--- MouseB_X_1 = 4 --
--- MouseB_X_2 = 5 --
--- DPI_Cyclic = 6 --
---------------------
 
---GUNS--------------------------------
-local AK47 = nil
-local AK47_X8_SCOPE = nil
---------------------------------------
+-------------------------SETUP-------------------------
+local AK47 = nil  --Bind for noscope / Handmade 
+local AK47_X8_SCOPE = nil --Bind for 8x scope
+-------------------------------------------------------
+--DO NOT USE LEFT OR RIGHT CLICK FOR BINDS-- 
 
---EXTRA_PART--------------------------
+-------------------------ARGS--------------------------
 function IsLeftNotPressed()
     return not IsMouseButtonPressed(1)
 end
 function IsRightNotPressed()
     return not IsMouseButtonPressed(3)
 end
---------------------------------------
+-------------------------------------------------------
 
---MAIN_PART----------------------------
+-------------------------MAIN--------------------------
 local gun = 0
 local kickback = falseB
 function OnEvent(event, arg)
---AK47
+	
 	if (event == "MOUSE_BUTTON_PRESSED" and arg == AK47) then
     kickback = not kickback
     gun = arg
@@ -43,9 +38,8 @@ function OnEvent(event, arg)
 		EnablePrimaryMouseButtonEvents(true)
 	end	
 end
----------------------------------------
 
---Recoil_Tables------------------------
+-------------------------DRAW-SPRAY--------------------------
 if gun == AK47 then
 	if kickback then
 		repeat			
@@ -1258,4 +1252,6 @@ elseif gun == AK47_X8_SCOPE then
 		until (IsLeftNotPressed())
 	end
 end
-end			
+end
+
+-- Created by xM-1
