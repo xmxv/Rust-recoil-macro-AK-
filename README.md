@@ -20,4 +20,6 @@ This code is public and therefore you are free to edit as you please and find yo
 
 
 
-Set in game Sensitivity to .8 or .7, whichever works best and FOV to 90. Change them as you please until you get a smoother spray. This won't fully eliminate recoil but if you can control what's left over, you'll do just fine. 
+Set in game Sensitivity to .8 or .7, whichever works best and FOV to 90. Change them as you please until you get a smoother spray. This won't fully eliminate recoil but will make it super minimal and very easily controllable. 
+
+Goodluck and Have fun!
