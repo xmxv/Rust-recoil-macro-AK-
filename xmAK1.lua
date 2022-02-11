@@ -1254,4 +1254,4 @@ elseif gun == AK47_X8_SCOPE then
 end
 end
 
--- Created by xM-1
+-- Created by z-Mythic
