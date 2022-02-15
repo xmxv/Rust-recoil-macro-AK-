@@ -1,20 +1,18 @@
 
--------------------------SETUP-------------------------
-local AK47 = nil  --Bind for noscope / Handmade 
-local AK47_X8_SCOPE = nil --Bind for 8x scope
+-------------------------CONFIG-------------------------
+local AK47 = nil  -- Bind for no scope or handmade.
+local AK47_X8_SCOPE = nil -- Bind for 8x
 -------------------------------------------------------
---DO NOT USE LEFT OR RIGHT CLICK FOR BINDS-- 
+--DO NOT USE LEFT OR RIGHT CLICK FOR BINDS
 
--------------------------ARGS--------------------------
+
 function IsLeftNotPressed()
     return not IsMouseButtonPressed(1)
 end
 function IsRightNotPressed()
     return not IsMouseButtonPressed(3)
 end
--------------------------------------------------------
 
--------------------------MAIN--------------------------
 local gun = 0
 local kickback = falseB
 function OnEvent(event, arg)
@@ -23,23 +21,23 @@ function OnEvent(event, arg)
     kickback = not kickback
     gun = arg
     if (kickback == false) then
-      	OutputLogMessage("AK47_MACRO-OFF\n")
+      	OutputLogMessage("Macro On\n")
     else
-		OutputLogMessage("AK47_MACRO-ON\n")
+		OutputLogMessage("Macro ON\n")
 		EnablePrimaryMouseButtonEvents(true)
 	end
 	elseif (event == "MOUSE_BUTTON_PRESSED" and arg == AK47_X8_SCOPE) then
     kickback = not kickback
     gun = arg
     if (kickback == false) then
-      	OutputLogMessage("AK47_X8_SCOPE_MACRO-OFF\n")
+      	OutputLogMessage("8x Scope Macro ON\n")
     else
-		OutputLogMessage("AK47_X8_SCOPE_MACRO-ON\n")
+		OutputLogMessage("8x Scope Macro ON\n")
 		EnablePrimaryMouseButtonEvents(true)
 	end	
 end
 
--------------------------DRAW-SPRAY--------------------------
+-------------------------Recoil Table--------------------------
 if gun == AK47 then
 	if kickback then
 		repeat			
