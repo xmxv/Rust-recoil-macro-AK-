@@ -4,5 +4,5 @@ Rust AK Recoil Macro for Logitech Devices.
 Fully working, Undetected AK-47 Macro for Rust.  (Only supports Logitech Devices ) 
 
 
-- Created and Maintained by z-Mythic 
+- Created and Maintained by Melonoma
 
